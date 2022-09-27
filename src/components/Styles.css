@@ -1,0 +1,21 @@
+.nav{
+    background-color: #a379c9;
+}
+
+.ul{
+margin-right: 3em;
+display: flex;
+justify-content: end;
+gap: 2em;
+list-style-type: none;
+text-decoration-line: none;
+}
+.link{
+    text-decoration: none;
+}
+.ubIcono{
+    display: flex;
+    justify-content: end;
+    font-size:2em;
+}
+
