@@ -1,17 +1,22 @@
+import { NavLink } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 import "../Styles.css"
+
+
 const Lista = ()=>{
 return (
 <ul className="ul">
-<li> <a href="#" className="link">Bebidas</a></li>
-<li> <a href="#" className="link">Golosinas</a></li>
-<li> <a href="#" className="link">Snacks</a></li>
-<li> <a href="#" className="link">Cigarrillos</a></li>
+<li> <NavLink  to='/category/bebidas' className="nav-item nav-link text-center" style={{color:"#596157"}}>Bebidas</NavLink></li>
+<li> <NavLink  to='/category/golosinas' className="nav-item nav-link text-center" style={{color:"#596157"}}>Golosinas</NavLink></li>
+<li> <NavLink  to='/category/Snacks' className="nav-item nav-link text-center" style={{color:"#596157"}}>Snacks</NavLink></li>
+
+
 
 </ul>);}
-export const NavBar = () =>{
+
+   export const NavBar = () =>{
     return <nav className="nav">
-        <h1>KIOSCO</h1>
+      <NavLink to='/' className="nav-item nav-link text-center" style={{color:"blueviolet"}}><h1>KIOSCO</h1></NavLink>  
         <Lista/>     
         <CartWidget/>
     </nav>

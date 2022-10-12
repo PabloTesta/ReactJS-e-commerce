@@ -1,5 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const CartWidget = ()=>{
-    return <i className="bi bi-cart-plus ubIcono"/>
+    return <Link to='/Carrito'><i className="bi bi-cart-plus ubIcono"/></Link>
 }

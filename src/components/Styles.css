@@ -1,5 +1,5 @@
 .nav{
-    background-color: #a379c9;
+    background-color: #cadf9e;
 }
 
 .ul{
@@ -17,5 +17,9 @@ text-decoration-line: none;
     display: flex;
     justify-content: end;
     font-size:2em;
+}
+.prod{
+    display: flex;
+    flex-direction: row;
 }
 
