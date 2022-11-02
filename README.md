@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# PROYECTO E-COMMERCE "KIOSKO" 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
