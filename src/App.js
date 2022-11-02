@@ -6,12 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './components/pages/ItemDetailContainer/ItemDetailContainer';
 import CarritoPage from './components/pages/CarritoPage/CarritoPage';
 import NotFound404 from './components/NotFound404/NotFound404';
-
+import CartContextProvider from './Context/CartContext';
 
 
 
 function App() {
   return (
+    <CartContextProvider >
     <BrowserRouter>
        <NavBar/>
        <Routes>
@@ -19,10 +20,11 @@ function App() {
            <Route path='/category/:idCategory' element={<ItemListContainer greeting={'BIENVENIDO A KIOSKO'}/> } />
            <Route path='/Detalle/:idProducto' element={<ItemDetailContainer/>} />
            <Route path='/Carrito' element={<CarritoPage/>} />
-           <Route path ='/404' element={<NotFound404/>}/>
            <Route path='*' element= {<Navigate to='/404' />} />
+           <Route path ='/404' element={<NotFound404/>}/>
         </Routes>
     </BrowserRouter> 
+    </CartContextProvider>
   )
 }
 

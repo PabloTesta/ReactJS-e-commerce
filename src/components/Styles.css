@@ -10,16 +10,19 @@ gap: 2em;
 list-style-type: none;
 text-decoration-line: none;
 }
-.link{
+/* .link{
     text-decoration: none;
 }
+*/
 .ubIcono{
     display: flex;
     justify-content: end;
     font-size:2em;
 }
+/*
 .prod{
     display: flex;
     flex-direction: row;
 }
 
+ */

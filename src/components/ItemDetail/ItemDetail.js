@@ -1,8 +1,22 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useCartContext } from "../../Context/CartContext";
+import ItemCount from "../ItemCount/ItemCount"
+
+export const ItemDetail = ({detalles}) => {
+  const [isCount,setisCount]=useState(true)
+const {addItem,cartList} = useCartContext()
 
 
+  const onAdd= (cantidad)=>{
+    // si quisiera iría un console.log para corroborar que viene "productos seleccionados y su cantidad"
+    addItem({...detalles,cantidad})
+    setisCount(false)
+  }
 
-const ItemDetail = ({detalles}) => {
-  return (
+ 
+
+return (
     <div
       key={detalles.id}             
       style={{margin:100}}
@@ -14,7 +28,7 @@ const ItemDetail = ({detalles}) => {
                   </div>
                   <div className="card-body">
                       <img src={`${detalles.foto}`} alt='' className='w-50'/>
-                      {`${'$'}${detalles.precio}`}
+                      {`${'$'}${detalles.price}`}
                       </div>
                       <div className="card-body">
                       {`${detalles.stock}${' Unidades disponibles'}`}
@@ -22,6 +36,25 @@ const ItemDetail = ({detalles}) => {
                       
                       </div>
                       
+
+                      { 
+                       isCount ? 
+                        <ItemCount onAdd={onAdd} stock={detalles.stock} init={1} />
+                          
+                            :
+                            <div>
+                                <Link to="/Carrito">
+                              <button>Terminar Compra</button>
+                                </Link>
+                                <Link to="/">
+                              <button>Seguir comprando </button>
+                                </Link>
+                            </div>
+                                         
+                      }
+                      
+                      <div>
+                      </div>
                       </div>)
   
 }
