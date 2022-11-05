@@ -19,8 +19,8 @@ const {addItem,cartList} = useCartContext()
 return (
     <div
       key={detalles.id}             
-      style={{margin:100}}
-         className='col-md-3'
+      style={{display:'flex',flexDirection:'row',flexWrap:'wrap', margin:'15px', maxWidth:'25vw'}}
+      className='card bg-ligth' 
          >
           <div className="card w-100 mt-5"/>
               <div className="card-header">
@@ -42,12 +42,12 @@ return (
                         <ItemCount onAdd={onAdd} stock={detalles.stock} init={1} />
                           
                             :
-                            <div>
+                            <div >
                                 <Link to="/Carrito">
-                              <button>Terminar Compra</button>
+                              <button className="btn btn-outline-success">Terminar Compra</button>
                                 </Link>
                                 <Link to="/">
-                              <button>Seguir comprando </button>
+                              <button className="btn btn-outline-primary">Seguir comprando </button>
                                 </Link>
                             </div>
                                          

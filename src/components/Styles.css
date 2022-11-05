@@ -14,15 +14,16 @@ text-decoration-line: none;
     text-decoration: none;
 }
 */
-.ubIcono{
+ .ubIcono{
     display: flex;
-    justify-content: end;
+    justify-content: start;
     font-size:2em;
+    
 }
-/*
-.prod{
+
+/* .prod{
     display: flex;
     flex-direction: row;
 }
-
  */
+ 

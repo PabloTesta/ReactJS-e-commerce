@@ -4,8 +4,8 @@ import { useCartContext } from '../../Context/CartContext';
 
 export const CartWidget = ()=>{
     const {cantidadTotal}= useCartContext()
-    return <div>
+    return <div >
         {cantidadTotal()!==0 && cantidadTotal()}
-        <Link to='/Carrito'><i className="bi bi-cart-plus ubIcono"/></Link>
+        <Link to='/Carrito'><i className="bi bi-cart-plus ubIcono "/></Link>
         </div>
 }

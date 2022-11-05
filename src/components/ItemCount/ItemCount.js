@@ -19,14 +19,15 @@ const handleOnAdd=()=>{
 onAdd(count)
 }
   return (
-    
-    <div style={{border:'1px solid black', display:'flex', gap:"5px"}} className ="w-51">
+     
+    <div  style={{border:'1px solid black', display:'flex', gap:"5px"}} className ="card w-55">
         
-        <button style={{margin:"10px"}} onClick={handleAdd}>Agregar +</button>
-        <button style={{margin:"10px"}} onClick={handleRemove}>Quitar -</button>
-        <button style={{margin:"10px"}} onClick={handleOnAdd}>Agregar al carrito</button>
-              <div >{count}</div>
+        <button className='btn btn-outline-success' style={{margin:"10px"}} onClick={handleAdd}>Sumar +</button>
+        <button className='btn btn-outline-danger' style={{margin:"10px"}} onClick={handleRemove}>Quitar -</button>
+        <button className='btn btn-outline-primary' style={{margin:"10px"}} onClick={handleOnAdd}>Agregar al carrito</button>
+              <div className='badge bg-secondary'>{count}</div>
     </div>
+    
     
     
   )

@@ -6,13 +6,13 @@ export const Item = ({producto}) => {
   
   return (
     
-    <div>
+    <div className="col-md-6">
         <div
                  
-    style={{margin:100}}
-    className='col-md-6' 
+    style={{margin:50}}
+    className='card col-md-8 ' 
    >
-  <div className="card w-100 mt-5"/>
+  
   <div className="card-header">
      {`${producto.name}-${producto.category}`}
      </div>
@@ -21,7 +21,7 @@ export const Item = ({producto}) => {
          {`${'$'}${producto.price}`}
          </div>
          <div className="card-footer">
-             <Link to={`/Detalle/${producto.id}`}><button className="btn btn-outline-primary btn-block">
+             <Link to={`/Detalle/${producto.id}`}><button className="btn btn-outline-info">
                  Detalle del producto                                  
                  </button>
                  </Link>

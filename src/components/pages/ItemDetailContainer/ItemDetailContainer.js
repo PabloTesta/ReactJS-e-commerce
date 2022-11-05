@@ -22,11 +22,11 @@ const ItemDetailContainer = () => {
   
   
   return (
-    <div>
+    <div className="card bg-dark" style={{margin:'10px'}}>
       {
         
         loading ?
-        <h2>Espere por favor...</h2>
+        <h2 style={{color:'white'}}>Espere por favor...</h2>
         : 
       <ItemDetail detalles={detalles}/>
       }

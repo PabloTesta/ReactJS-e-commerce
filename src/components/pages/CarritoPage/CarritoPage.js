@@ -55,14 +55,14 @@ const handleInputChange = (e)=>{
   
 
   return (
-    <div>
+    <div className='card bg-secondary' style={{margin:'10px'}} >
 
 
 {IdBuy && <h3>ORDEN GENERADA, SU IDENTIFICACIÓN ES: {IdBuy}</h3>}
 {cartList.length === 0 ?
    <div> 
     <h2>El carrito se encuentra Vacío</h2>
-    <Link to='/'>Ir a ver productos</Link>
+    <Link className='link-warning' to='/'>Ir a ver productos</Link>
     </div>
     :
 
@@ -77,11 +77,11 @@ const handleInputChange = (e)=>{
         <input type='text' name="name" placeholder="Nombre" value={dataForm.name} onChange={handleInputChange} required/>
         <input type='text' name="phone" placeholder="Teléfono" value={dataForm.phone} onChange={handleInputChange} required/>
         <input type='text' name="email" placeholder="Email" value={dataForm.email} onChange={handleInputChange} required/>
-        <input type='text' name="email1" placeholder="Email" value={dataForm.email1} onChange={handleInputChange} required/>
-          <button type='submit' >Generar Orden</button>                      
+        <input type='text' name="email1" placeholder="Confirme su email" value={dataForm.email1} onChange={handleInputChange} required/>
+          <button type='submit' className='btn btn-success' >Generar Orden</button>                      
             
   </form>
-  <button onClick={vaciarCarrito}> Vaciar Carrito</button>
+  <button className='btn btn-danger' onClick={vaciarCarrito}> Vaciar Carrito</button>
 </>
 }
     </div>
