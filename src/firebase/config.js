@@ -5,8 +5,8 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.APIKEY,
-  authDomain: process.env.AUTHDOMAIN,
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
   projectId: "e-commerce-kiosko",
   storageBucket: "e-commerce-kiosko.appspot.com",
   messagingSenderId: "106361383308",
